@@ -1,0 +1,1360 @@
+
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE rdf:RDF [
+ <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+]>
+
+<rdf:RDF
+  xmlns:owl = "http://www.w3.org/2002/07/owl#"
+  xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs = "http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:xsd = "http://www.w3.org/2001/XMLSchema#"
+  xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+
+  <owl:Ontology rdf:about="">
+      <rdfs:comment>Ontologie d'une plate-forme de partage de photo fictive</rdfs:comment>
+      <rdfs:label>Ontologie de la plate-forme fictive</rdfs:label>
+  </owl:Ontology>
+
+  <!-- Définition des classes -->
+  <owl:Class rdf:ID="Utilisateur">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#habiteAu" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#login" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#e-mail" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#password" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Album">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#appartientA" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#nomAlbum" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#date" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#prive" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Photo">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#estDansLalbum" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#nomPhoto" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#commentaire" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Adresse">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#estDansLaVille" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#numero" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#rue" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ville">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#estDansLePays" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#nomVille" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#codePostale" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Pays">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#nomPays" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#diminutif" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Appareil">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#estDeLaMarqueApp" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#aPourProprietaire" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#reference" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#resolution" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#video" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#autonomie" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Reflex">
+      <rdfs:subClassOf rdf:resource="#Appareil" />
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#aPourObjectifR" />
+              <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#tropicalise" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#vitesseMax" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#pro" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bridge">
+      <rdfs:subClassOf rdf:resource="#Appareil" />
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#objectif" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hybride">
+      <rdfs:subClassOf rdf:resource="#Appareil" />
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#aPourObjectifH" />
+              <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#stabilisateur" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Compact">
+      <rdfs:subClassOf rdf:resource="#Appareil" />
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#zoom" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Objectif">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#estDeLaMarqueOb" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#ouverture" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#focal" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#stabilisateurObj" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Marque">
+      <rdfs:subClassOf>
+          <owl:Restriction>
+              <owl:onProperty rdf:resource="#nomMarque" />
+              <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+      </rdfs:subClassOf>
+  </owl:Class>
+
+  <!-- Définition des Propriétés -->
+  <!-- Utilisateur -->
+  <owl:ObjectProperty rdf:ID="estLamiDe">
+      <rdf:type rdf:resource="&owl;SymmetricProperty" />
+      <rdfs:domain rdf:resource="#Utilisateur" />
+      <rdfs:range rdf:resource="#Utilisateur" />
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="habiteAu">
+      <rdfs:domain rdf:resource="#Utilisateur" />
+      <rdfs:range rdf:resource="#Adresse" />
+  </owl:ObjectProperty>
+
+  <!-- Adresse -->
+  <owl:ObjectProperty rdf:ID="estDansLaVille">
+      <rdfs:domain rdf:resource="#Adresse" />
+      <rdfs:range rdf:resource="#Ville" />
+  </owl:ObjectProperty>
+
+  <!-- Ville -->
+  <owl:ObjectProperty rdf:ID="estDansLePays">
+      <rdfs:domain rdf:resource="#Ville" />
+      <rdfs:range rdf:resource="#Pays" />
+  </owl:ObjectProperty>
+
+  <!-- Album -->
+  <owl:ObjectProperty rdf:ID="appartientA">
+      <rdfs:domain rdf:resource="#Album" />
+      <rdfs:range rdf:resource="#Utilisateur" />
+  </owl:ObjectProperty>
+
+  <!-- Photo -->
+  <owl:ObjectProperty rdf:ID="estDansLalbum">
+      <rdfs:domain rdf:resource="#Photo" />
+      <rdfs:range rdf:resource="#Album" />
+  </owl:ObjectProperty>
+
+  <!-- Appareil -->
+  <owl:ObjectProperty rdf:ID="estPropriétaireDe">
+      <rdfs:domain rdf:resource="#Appareil" />
+      <rdfs:range rdf:resource="#Utilisateur" />
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="estDeLaMarqueApp">
+      <rdfs:domain rdf:resource="#Appareil" />
+      <rdfs:range rdf:resource="#Marque" />
+  </owl:ObjectProperty>
+
+  <!-- Objectif -->
+  <owl:ObjectProperty rdf:ID="estDeLaMarqueOb">
+      <rdfs:domain rdf:resource="#Objectif" />
+      <rdfs:range rdf:resource="#Marque" />
+  </owl:ObjectProperty>
+
+  <!-- Reflex -->
+  <owl:ObjectProperty rdf:ID="aPourObjectifR">
+      <rdfs:domain rdf:resource="#Reflex" />
+      <rdfs:range rdf:resource="#Objectif" />
+  </owl:ObjectProperty>
+
+  <!-- Bridge -->
+  <owl:ObjectProperty rdf:ID="aPourObjectifB">
+      <rdfs:domain rdf:resource="#Bridge" />
+      <rdfs:range rdf:resource="#Objectif" />
+  </owl:ObjectProperty>
+
+  <!-- Hybride -->
+  <owl:ObjectProperty rdf:ID="aPourObjectifH">
+      <rdfs:domain rdf:resource="#hybride" />
+      <rdfs:range rdf:resource="#Objectif" />
+  </owl:ObjectProperty>
+
+  <!-- Définition des données -->
+  <!-- Classe Utilisateur -->
+  <owl:DataTypeProperty rdf:ID="login">
+      <rdfs:domain rdf:resource="#Utilisateur" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="e-mail">
+      <rdfs:domain rdf:resource="#Utilisateur" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="password">
+      <rdfs:domain rdf:resource="#Utilisateur" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Album -->
+  <owl:DataTypeProperty rdf:ID="nomAlbum">
+      <rdfs:domain rdf:resource="#Album" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="date">
+      <rdfs:domain rdf:resource="#Album" />
+      <rdfs:range rdf:resource="&xsd;date" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="prive">
+      <rdfs:domain rdf:resource="#Album" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Photo -->
+  <owl:DataTypeProperty rdf:ID="nomPhoto">
+      <rdfs:domain rdf:resource="#Photo" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="commentaire">
+      <rdfs:domain rdf:resource="#Photo" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Adresse -->
+  <owl:DataTypeProperty rdf:ID="numero">
+      <rdfs:domain rdf:resource="#Adresse" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="rue">
+      <rdfs:domain rdf:resource="#Adresse" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Ville -->
+  <owl:DataTypeProperty rdf:ID="nomVille">
+      <rdfs:domain rdf:resource="#Ville" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="codePostale">
+      <rdfs:domain rdf:resource="#Ville" />
+      <rdfs:range rdf:resource="&xsd;integer" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Pays -->
+  <owl:DataTypeProperty rdf:ID="nomPays">
+      <rdfs:domain rdf:resource="#Pays" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="diminutif">
+      <rdfs:domain rdf:resource="#Pays" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Appareil -->
+  <owl:DataTypeProperty rdf:ID="reference">
+      <rdfs:domain rdf:resource="#Appareil" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="resolution">
+      <rdfs:domain rdf:resource="#Appareil" />
+      <rdfs:range rdf:resource="&xsd;integer" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="video">
+      <rdfs:domain rdf:resource="#Appareil" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="autonomie">
+      <rdfs:domain rdf:resource="#Appareil" />
+      <rdfs:range rdf:resource="&xsd;integer" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Reflex -->
+  <owl:DataTypeProperty rdf:ID="tropicalise">
+      <rdfs:domain rdf:resource="#Reflex" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="vitesseMax">
+      <rdfs:domain rdf:resource="#Reflex" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="pro">
+      <rdfs:domain rdf:resource="#Reflex" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Bridge -->
+  <owl:DataTypeProperty rdf:ID="objectif">
+      <rdfs:domain rdf:resource="#Bridge" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Hybride -->
+  <owl:DataTypeProperty rdf:ID="stabilisateur">
+      <rdfs:domain rdf:resource="#Hybride" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Compact -->
+  <owl:DataTypeProperty rdf:ID="zoom">
+      <rdfs:domain rdf:resource="#Compact" />
+      <rdfs:range rdf:resource="&xsd;integer" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Marque -->
+  <owl:DataTypeProperty rdf:ID="nomMarque">
+      <rdfs:domain rdf:resource="#Marque" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <!-- Classe Objectif -->
+  <owl:DataTypeProperty rdf:ID="ouverture">
+      <rdfs:domain rdf:resource="#Objectif" />
+      <rdfs:range rdf:resource="&xsd;float" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="focal">
+      <rdfs:domain rdf:resource="#Objectif" />
+      <rdfs:range rdf:resource="&xsd;string" />
+  </owl:DataTypeProperty>
+
+  <owl:DataTypeProperty rdf:ID="stabilisateurObj">
+      <rdfs:domain rdf:resource="#Objectif" />
+      <rdfs:range rdf:resource="&xsd;boolean" />
+  </owl:DataTypeProperty>
+
+  <!-- Insertion des données -->
+  <!-- Utilisateur -->
+  <Utilisateur rdf:ID="Rolandl">
+      <login>rolandl</login>
+      <e-mail>def@email.fr</e-mail>
+      <password>OWL13</password>
+      <habiteAu rdf:resource="#MaisonRolandl" />
+      <estLamiDe rdf:resource="#Lanquett" />
+  </Utilisateur>
+
+  <Utilisateur rdf:ID="Lanquett">
+      <login>lanquett</login>
+      <e-mail>abc@email.fr</e-mail>
+      <password>13B56</password>
+      <habiteAu rdf:resource="#MaisonLanquett" />
+      <estLamiDe rdf:resource="#Rolandl" />
+  </Utilisateur>
+
+  <!-- Adresse -->
+  <Adresse rdf:ID="MaisonRolandl">
+      <numero>9</numero>
+      <rue>Pierre Hugo</rue>
+      <estDansLaVille rdf:resource="#Clamart" />
+  </Adresse>
+
+  <Adresse rdf:ID="MaisonLanquett">
+      <numero>72</numero>
+      <rue>Ste Colombe</rue>
+      <estDansLaVille rdf:resource="#Villejuif" />
+  </Adresse>
+
+  <!-- Villes -->
+  <Ville rdf:ID="Clamart">
+      <nomVille>Clamart</nomVille>
+      <codePostale>92140</codePostale>
+      <estDansLePays rdf:resource="#France" />
+  </Ville>
+
+  <Ville rdf:ID="Villejuif">
+      <nomVille>Villejuif</nomVille>
+      <codePostale>94800</codePostale>
+      <estDansLePays   rdf:resource="#France" />
+  </Ville>
+
+  <!-- Pays -->
+  <Pays rdf:ID="France">
+      <nomPays>France</nomPays>
+      <diminutif>FR</diminutif>
+  </Pays>
+
+  <!-- Album -->
+  <Album rdf:ID="VacancesUSA">
+      <nomAlbum>Vacances USA</nomAlbum>
+      <date>17/06/1999</date>
+      <prive>0</prive>
+      <appartientA rdf:resource="#Rolandl" />
+  </Album>
+
+  <Album rdf:ID="VacancesSki">
+      <nomAlbum>Vacances Ski</nomAlbum>
+      <date>25/02/1999</date>
+      <prive>1</prive>
+      <appartientA rdf:resource="#Lanquett" />
+  </Album>
+
+  <Album rdf:ID="Concert">
+      <nomAlbum>Concert</nomAlbum>
+      <date>28/03/1998</date>
+      <prive>1</prive>
+      <appartientA rdf:resource="#Rolandl" />
+  </Album>
+
+  <!-- Photo -->
+  <Photo rdf:ID="USA_1">
+      <nomPhoto>USA(1).jpg</nomPhoto>
+      <commentaire>Stylé !</commentaire>
+      <estDansLalbum rdf:resource="#VacancesUSA" />
+  </Photo>
+
+  <Photo rdf:ID="USA_2">
+      <nomPhoto>USA(2).jpg</nomPhoto>
+      <commentaire>-</commentaire>
+      <estDansLalbum rdf:resource="#VacancesUSA" />
+  </Photo>
+
+  <Photo rdf:ID="Ski_1">
+      <nomPhoto>Ski(1).jpg</nomPhoto>
+      <commentaire>MDR !</commentaire>
+      <estDansLalbum rdf:resource="#VacancesSKI" />
+  </Photo>
+
+  <Photo rdf:ID="Ski_2">
+      <nomPhoto>Ski(2).jpg</nomPhoto>
+      <commentaire>Romain</commentaire>
+      <estDansLalbum rdf:resource="#VacancesSKI" />
+  </Photo>
+
+  <Photo rdf:ID="Ski_3">
+      <nomPhoto>Ski(3).jpg</nomPhoto>
+      <commentaire>-</commentaire>
+      <estDansLalbum rdf:resource="#VacancesSKI" />
+  </Photo>
+
+  <Photo rdf:ID="Concert_1">
+      <nomPhoto>Concert(1).jpg</nomPhoto>
+      <commentaire>ahah !</commentaire>
+      <estDansLalbum rdf:resource="#Concert" />
+  </Photo>
+
+  <Photo rdf:ID="Concert_2">
+      <nomPhoto>Concert(2).jpg</nomPhoto>
+      <commentaire>-</commentaire>
+      <estDansLalbum rdf:resource="#Concert" />
+  </Photo>
+
+  <Photo rdf:ID="Concert_3">
+      <nomPhoto>Concert(3).jpg</nomPhoto>
+      <commentaire>-</commentaire>
+      <estDansLalbum rdf:resource="#Concert" />
+  </Photo>
+
+  <!-- Appareil -->
+  <Compact rdf:ID="AppareilRolandl">
+      <reference>IXUS 105</reference>
+      <resolution>12</resolution>
+      <video>1</video>
+      <autonomie>60</autonomie>
+      <zoom>32</zoom>
+      <aPourPropietaire rdf:resource="#Rolandl" />
+      <estDeLaMarqueApp rdf:resource="#Canon" />
+  </Compact>
+
+  <Reflex rdf:ID="AppareilLanquett">
+      <reference>K7</reference>
+      <resolution>14</resolution>
+      <video>1</video>
+      <autonomie>90</autonomie>
+      <tropicalise>1</tropicalise>
+      <vitesseMax>1/8000</vitesseMax>
+      <pro>0</pro>
+      <aPourPropietaire rdf:resource="#Lanquett" />
+      <estDeLaMarqueApp rdf:resource="#Pentax" />
+      <aPourObjectifR rdf:resource="#ObjectifLanquett" />
+  </Reflex>
+
+  <!-- Objectif -->
+  <Objectif rdf:ID="ObjectifLanquett">
+      <ouverture>3.5</ouverture>
+      <focal>18-250</focal>
+      <stabilisateurObj>0</stabilisateurObj>
+      <estDeLaMarqueOb rdf:resource="#Pentax" />
+  </Objectif>
+
+  <!-- Marque -->
+  <Marque rdf:ID="Canon">
+      <nomMarque>Canon</nomMarque>
+  </Marque>
+
+  <Marque rdf:ID="Pentax">
+      <nomMarque>Pentax</nomMarque>
+  </Marque>
+</rdf:RDF>

@@ -1,0 +1,955 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rahma/ontologies/2020/panneOnto#"
+     xml:base="http://www.semanticweb.org/rahma/ontologies/2020/panneOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:panneOnto="http://www.semanticweb.org/rahma/ontologies/2020/panneOnto.owl#"
+     xmlns:pannesOnto="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#"
+     xmlns:untitled-ontology-68="http://www.semanticweb.org/rahma/ontologies/2020/4/untitled-ontology-68#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/panneOnto.owl#hasSolution -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/panneOnto.owl#hasSolution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Modifie -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Modifie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Declaration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#confirmeDemande -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#confirmeDemande">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#admin"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#declare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#declare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#declarepar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#declarepar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#hasSol -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#hasSol"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#recherche -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#recherche">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#supprime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#supprime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Declaration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#s&apos;estProduitSur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#s&apos;estProduitSur">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Commentaire -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Commentaire">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DateDeclaration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DateDeclaration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Declaration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DatePanne -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DatePanne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DateSol -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DateSol">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DeclarationQuestion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DeclarationQuestion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Declaration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Identifiant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Identifiant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#admin"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#LibelleMateriel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#LibelleMateriel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Login -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Login">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Matricule -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Matricule">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#NumSerieMateriel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#NumSerieMateriel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Password -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Password">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Phone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Phone">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#ReferenceMateriel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#ReferenceMateriel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#ReferencePanne -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#ReferencePanne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#StatutPanne -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#StatutPanne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Surname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Surname">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#TypePanne -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#TypePanne">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Declaration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Declaration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#declarepar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DateDeclaration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DeclarationQuestion"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Description"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#LibelleMateriel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#NumSerieMateriel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#ReferenceMateriel"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/panneOnto.owl#hasSolution"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#declarepar"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#s&apos;estProduitSur"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Materiels"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DatePanne"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#StatutPanne"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#TypePanne"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneElectrique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneElectrique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneInformatique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneInformatique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneMecanique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneMecanique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneProduction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneProduction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Commentaire"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#DateSol"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Email"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Login"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Matricule"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Name"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Password"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Phone"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Surname"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#admin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#admin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Utilisateur"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/4/panneOnto.owl#SolGODEX1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/4/panneOnto.owl#SolGODEX1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Désinstallation et réinstallation Driver (2)</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/panneOnto.owl#imprimante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/panneOnto.owl#imprimante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Panne"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr2"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr3"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr4"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr5"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Problemes de qualite impression.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Equipement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Equipement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneProduction"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip2"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip3"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip4"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip5"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Les équipements réseaux tombent en panne.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#GODEX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#GODEX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneInformatique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/4/panneOnto.owl#SolGODEX1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolGODEX2"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imprimante GODEX n&apos;imprime pas meme aprés calibrage.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneInformatique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolPC1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolPC2"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comment formater un PC ?</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnom1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnom1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérifier la couleur du douille avec un câblage ok teste.
+S&apos;il n&apos;est pas vérifié alors il faut contrôler l&apos;Etat de l&apos;alimentation du l&apos;automate.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnom2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnom2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérifier la couleur du douille avec un câblage ok teste.
+S&apos;il est vérifié, ensuite il faut faire nettoyage du module avec pistolet et vérifier l&apos;orientation du détecteur couleur.
+Si cet dernier étape est prouvé alors vérifier la nuance du douille.
+Enfin, il faut faire un réapprentissage du l&apos;automate et une simulation avec douille ok/nok.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnomalie1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnomalie1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérifier l&apos;alimentation générale Pression dans TCE.
+S&apos;il n&apos;est pas vérifié, alors il faut faire un réglage réducteur de pression.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnomalie2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnomalie2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérifier l&apos;alimentation générale Pression dans TCE.
+S&apos;il est vérifié, ensuite il faut vérifier manomètre sur TCE.
+S&apos;il est prouvé, alors vérifier s&apos;il un fuit dari remarquable dans tous TCE.
+S&apos;il est examiné, il faut donc vérifier douille ok enchantions du test d&apos;étancgéité.
+Si ce dernier étape est testé alors il faut vérifier l&apos;Etat du joint ou pate joint du module.
+Enfin, on doit faire un changement du joint +simulation avec douille ok/nok.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manipulez les fils et fibres optiques, les enroulez ou les pliez correctement afin de ne pas les endommages.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utiliser une alimentation électrique.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérifiez que l&apos;équipement est branché correctement et que le cordan d&apos;alimentation ne risque pas de court-circuit.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protégez les lentilles de la pissiére en plaçant systématiquement une housse sur les appareils optiques qu&apos;il ne sont pas utilisés.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolEquip5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérifiez les switchs et utilisez  le systéme de gestion de parc informatique pour trouver le switch qui ne marche pas.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolGODEX2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolGODEX2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nettoyage circuit d&apos;impression.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolPC1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolPC1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formater le disque dur :
+Ouvrir mon ordinateur --&gt; Sélectionner la partition ou le disque dur que vous souhaitez de formater --&gt; Sélectionner Formater en clic droit --&gt; Cliquer sur le bouton OK.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolPC2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolPC2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formater mon PC à fond : 
+*Télécharger le logiciel de sauvgarde de système et installez-le dans un ordinateur.
+*Créez un disque de sauvgarde bootable avec un CD ou une cké USB.
+*Démarrez le PC concerné et tenez une touche pour entrer dans le BIOS et modifiez l&apos;ordre de démarrage.
+*Entrez dans le menu principal du logiciel et sélectionnez la fonction Efaccement de disque dûr.
+*Sélectionnez le disque dur concerné et formatez-le complétement dans quelques minutes.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolTpShort1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolTpShort1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Débranchement de câblage module par module tout en gardant l&apos;oeil sur le message d&apos;erreur.
+Sil le message disparaît, alors il faut vérifier s&apos;il ya des brin débordants ou câble chaux sans isolation ou toute autre contact entre fils continuités et schalter de maintient.
+Et on termine par débrancher câblage et informer QM et production.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolTpShort2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolTpShort2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Débranchement de câblage module par module tout en gardant l&apos;oeil sur le message d&apos;erreur.
+Si le message ne disparaît pas, alors il faut débrancher l&apos;alimentation des cartes en partant par la dérnière carte.
+Ensuite le message disparaît + LED short GND sur carte éteinte.
+Par suite, rebrancher la dernière alimentation créant le défaut et débrancher l&apos;alimentation des pruf une par une. Et on termine par l&apos;inspectation isolation électrique de la pruf en question.
+Enfin, réclamer au TSK ou MMC.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolUSB1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolUSB1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pour formater une clé USB en FAT sous Windows, procéder comme suit :
+Ouvrir le Panneau de Configuration.
+Choisir Outils d&apos;administration.
+Aller sur Gestion de l&apos;Ordinateur.
+Sélectionner Gestion des disques.
+Cliquer avec le bouton droit sur le lecteur correspondant à la clé USB et choisir &quot;Formater..&quot;.
+Si la clé possède une capacité de plus de 2 GO, choisir FAT32 de préférence.
+Enfin valider avex OK.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolUSB2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolUSB2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pour formater une clé USB en FAT sous Mac OS, procéder comme suit :
+Ouvrir l&apos;Utilitaire de disque.
+Sélectionner l&apos;icone de la clé USB dans la partie gauche de la fenetre.
+Cliquez sur l&apos;onglet Partitionner dans la partie droite de la fenetre.
+Remplacer Actuel par 1 partition.
+Cliquer sur Options.
+Choisir Enregistrement de démarrage principal (MBR).
+Cliquer  sur OK pour valider le choix. Puis de retour dans la fenetre principale, choisir le format MS-DOS (FAT).
+Donner un titre à ce volume puis au bas de la fenetre, cliquer sur Appliquer.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Soldecoupage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Soldecoupage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changer la serrage de la bille.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nettoyage de la tête d&apos;impression.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remplacement d&apos;une cartouche d&apos;encre vide.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vérification de l&apos;état de la cartouche d&apos;encre.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Séléction du type de papier adapté.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solimpr5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Solution"/>
+        <pannesOnto:DateSol rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30-06-2020</pannesOnto:DateSol>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remplacement d&apos;une cartouche d&apos;encre avant qu&apos;elle ne soit pas vide.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#TpShort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#TpShort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneElectrique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolTpShort1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolTpShort2"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TP Short sur TCE TSK : court circuit entre 24V ou 5V et masse avec message en couleur violet &lt;&lt;TP Short&gt;&gt; sur écran + LED short GND activé sur carte master.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#USB -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#USB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneInformatique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolUSB1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolUSB2"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comment formater clé USB ?</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#anomalie1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#anomalie1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneElectrique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnom1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnom2"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anomalie détectée au automate détection couleur : couleur douille faux.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#anomalie2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#anomalie2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneElectrique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnomalie1"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#SolAnomalie2"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anomalie pneumatique détectée : chute de pression</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#decoupage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#decoupage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#PanneMecanique"/>
+        <pannesOnto:hasSol rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#Soldecoupage"/>
+        <pannesOnto:DatePanne rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29-06-2020</pannesOnto:DatePanne>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Découpage n&apos;est pas juste.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#rahma -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#rahma">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <pannesOnto:Email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rahma.houas@gmail.com</pannesOnto:Email>
+        <pannesOnto:Identifiant rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</pannesOnto:Identifiant>
+        <pannesOnto:Login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empl</pannesOnto:Login>
+        <pannesOnto:Matricule rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7851</pannesOnto:Matricule>
+        <pannesOnto:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rahma</pannesOnto:Name>
+        <pannesOnto:Password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empl</pannesOnto:Password>
+        <pannesOnto:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#int">55972953</pannesOnto:Phone>
+        <pannesOnto:Surname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">houas</pannesOnto:Surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#wiem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#wiem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rahma/ontologies/2020/pannesOnto.owl#employee"/>
+        <pannesOnto:Email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wiem.zeramdini@gmail.com</pannesOnto:Email>
+        <pannesOnto:Identifiant rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</pannesOnto:Identifiant>
+        <pannesOnto:Login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empl2</pannesOnto:Login>
+        <pannesOnto:Matricule rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7926</pannesOnto:Matricule>
+        <pannesOnto:Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wiem</pannesOnto:Name>
+        <pannesOnto:Password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">empl2</pannesOnto:Password>
+        <pannesOnto:Phone rdf:datatype="http://www.w3.org/2001/XMLSchema#int">56987123</pannesOnto:Phone>
+        <pannesOnto:Surname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zeramdini</pannesOnto:Surname>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
